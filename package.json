@@ -1,9 +1,9 @@
 {
+  "homepage": "https://avvelire.github.io/cms-app/",
   "dependencies": {
     "@types/node": "^20.8.9",
     "@types/react-router-dom": "^5.3.3",
     "chart.js": "^4.4.0",
-    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
@@ -31,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-webpack-plugin": "^4.0.1",
     "fork-ts-checker-webpack-plugin": "^9.0.0",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.3",
     "node-sass": "^9.0.0",
     "sass-loader": "^13.3.2",
@@ -43,6 +44,8 @@
   },
   "scripts": {
     "start": "webpack serve --config webpack.dev.config.ts",
-    "build": "webpack --config webpack.prod.config.ts"
+    "build": "webpack --config webpack.prod.config.ts",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   }
 }
